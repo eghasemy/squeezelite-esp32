@@ -111,8 +111,6 @@ jobs:
             depth: 32      
           - node: bootstrap
             depth: 32
-          - node: ESP32-S3-N16R8
-            depth: 32
     steps:
     - uses: actions/checkout@v2
       with:
