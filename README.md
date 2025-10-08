@@ -73,6 +73,8 @@ Most DAC will work out-of-the-box with simply an I2S connection, but some requir
 ### Raw WROOM esp32-s3 module
 The esp32-s3 based modules like [this](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) are also supported but requires esp-idf 4.4. It is not yet part of official releases, but it compiles & runs. The s3 does not have bluetooth audio. Note that CPU performances are greatly enhanced.
 
+The ESP32-S3 N16R8 variant (16MB flash, 8MB PSRAM) is now supported with a dedicated configuration. To build for this target, use the `build-scripts/ESP32-S3-N16R8-sdkconfig.defaults` configuration file.
+
 ### SqueezeAMP
 This is the main hardware companion of Squeezelite-esp32 and has been developped together. Details on capabilities can be found [here](https://forums.slimdevices.com/showthread.php?110926-pre-ANNOUNCE-SqueezeAMP-and-SqueezeliteESP32) and [here](https://github.com/philippe44/SqueezeAMP).
 
