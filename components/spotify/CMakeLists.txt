@@ -28,8 +28,9 @@ set(BELL_EXTERNAL_CJSON "idf::json" CACHE STRING "provide own CJSON")
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cspot ${CMAKE_CURRENT_BINARY_DIR}/cspot)
 target_link_libraries(${COMPONENT_LIB} PRIVATE cspot ${EXTRA_REQ_LIBS})
 
-# Force C++20 standard for cspot and bell targets (ESP32-S3 compatibility)
+# Force C++20 standard for spotify component and its dependencies (ESP32-S3 compatibility)
 # This is needed because ESP-IDF appends -std=gnu++11 which overrides the CMAKE_CXX_STANDARD
+target_compile_options(${COMPONENT_LIB} PRIVATE -std=gnu++2a)
 target_compile_options(cspot PRIVATE -std=gnu++2a)
 target_compile_options(bell PRIVATE -std=gnu++2a)
 
